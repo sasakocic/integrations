@@ -92,6 +92,8 @@ class NaszaklasaService
             'age' => $user->age,
             'email' => $user->email,
             'thumbnailUrl' => $user->thumbnailUrl,
+            'user' => $user,
+            'array' => (array) $user,
         ];
 
         return $entity;
