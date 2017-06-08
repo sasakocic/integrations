@@ -3,7 +3,6 @@
 namespace Integration\naszaklasa;
 
 use Integration\ConfigEntity;
-use li3_whow\social\SocialEntity;
 
 class NaszaklasaService
 {
@@ -58,7 +57,7 @@ class NaszaklasaService
      *
      * @return string $url
      */
-    public function getLoginUrl(array $params)
+    public function getLoginUrl()
     {
         $query = [
             'client_id' => $this->config->key,
@@ -73,11 +72,11 @@ class NaszaklasaService
 
     /**
      * Authenticate user for given params.
-     * 
+     *
      * @param array $query
      * @param array $params
-     * @return SocialEntity
      *
+     * @return array $entity
      * @static
      */
     public static function authenticate(array $query, array $params)
@@ -94,10 +93,8 @@ class NaszaklasaService
             'email' => $user->email,
             'thumbnailUrl' => $user->thumbnailUrl,
         ];
-        $socialUser = new SocialEntity($entity);
 
-        return $socialUser;
-        
+        return $entity;
     }
 
     /**
