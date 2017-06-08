@@ -1,11 +1,10 @@
 {
-  "name": "skocic/integrations",
+  "name": "sasakocic/integrations",
   "description": "Login Integrations like Facebook, Nasza Klasa, Vkontakte",
   "license": "MIT",
   "authors": [
     {
       "name": "Sasa Kocic",
-      "email": "s.kocic@whow.net"
     }
   ],
   "require": {
